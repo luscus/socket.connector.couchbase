@@ -1,0 +1,39 @@
+{
+  "name": "socket.connector.couchbase",
+  "version": "0.0.1",
+  "license": "MIT",
+  "homepage": "https://github.com/luscus/socket.connector.couchbase",
+  "author": "https://github.com/luscus/socket.connector.couchbase/graphs/contributors",
+  "main": "./lib/socket.connector.couchbase",
+  "bugs": "https://github.com/luscus/node-socket.connector.couchbase/issues",
+  "description": "Wraps the couchbase package opening a connector to send/retrieve data from a Couchbase DB",
+  "keywords": [
+    "network",
+    "socket",
+    "connector",
+    "couchbase"
+  ],
+  "dependencies": {
+    "assert-plus": "0.1.5",
+    "node.extend": "1.1.2",
+    "socket.base": "0.0.9",
+    "couchbase": "2.0.5",
+    "q": "1.1.2"
+  },
+  "devDependencies": {
+    "grunt": "0.4.5",
+    "grunt-license-report": "0.0.8",
+    "grunt-contrib-jshint": "0.11.0",
+    "grunt-mocha-test": "0.12.7",
+    "load-grunt-tasks": "3.1.0",
+    "chai": "2.0.0",
+    "mocha": "2.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:luscus/socket.connector.couchbase.git"
+  },
+  "scripts": {
+    "test": "grunt test"
+  }
+}

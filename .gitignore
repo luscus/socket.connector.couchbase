@@ -1,0 +1,9 @@
+node_modules/
+bower_components/
+.idea/
+config/runtime.json
+npm-debug.log
+.git/
+.DS_Store
+*~
+._*
