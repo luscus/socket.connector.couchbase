@@ -1,6 +1,6 @@
 {
   "name": "socket.connector.couchbase",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "license": "MIT",
   "homepage": "https://github.com/luscus/socket.connector.couchbase",
   "author": "https://github.com/luscus/socket.connector.couchbase/graphs/contributors",
@@ -17,7 +17,7 @@
     "assert-plus": "0.1.5",
     "node.extend": "1.1.2",
     "prototype-less": "0.1.1",
-    "socket.base": "0.0.14",
+    "socket.base": "0.0.16",
     "couchbase": "2.0.5"
   },
   "devDependencies": {
