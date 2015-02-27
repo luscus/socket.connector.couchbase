@@ -1,40 +1,42 @@
-// testing
-var zmqLib = require('../lib/socket.connector.couchbase.js'),
-    service = {
-      name: 'zmqTest'
-    },
-    client = {
-      name: 'client',
-      pattern: 'req'
-    },
-    server = {
-      name: 'server',
-      host: ['localhost'],
-      pattern: 'rep',
-      port: [22000, 22001]
-    };
+/* jshint node:true */
+/* global require */
+/* global process */
+var couch = require('../lib/socket.connector.couchbase');
+
+var config = {
+  hosts: ['192.168.0.125'],
+  expiry: {
+    default: 86400,
+    cargo: 2592000,
+    truck: 2592000
+  },
+  pattern: 'req',
+  name: 'connector.couchbase.exchange',
+  target: 'uam',
+  password: 'test',
+  connector: 'couchbase'
+};
 
 
-/*
- var socket = new Socket(server);
+var socket = couch(config);
 
- socket.on('listen', function (url) {
- console.log('Process "' + process.pid + '" listening on ' + url);
- })
- */
 
-var socket = zmqLib(client);
 
 socket.on('message', function (packet, clusterSource) {
   console.log('<<<<<<<<<<<<<<<<<<<<<');
-  console.log('response at : ', new Date().toISOString(), 'from', clusterSource, packet.header);
+  console.log('response at : ', new Date().toISOString(), 'from', clusterSource, packet);
 });
 
-socket.connect(server);
-//socket.connect(server.protocol+'://localhost:'+22001);
+setInterval(function () {
 
 setInterval(function () {
-    console.log('--------------');
-    console.log('sending: ', {pid:process.pid,timestamp: new Date().toISOString()});
-  socket.send({requester: new Date().toISOString()});
+  var date = new Date().toISOString();
+  var random1 = Math.floor(Math.random() * 100000);
+  var random2 = Math.floor(Math.random() * 100000);
+  var data = {id: 'test::'+date+'::'+random1+'::'+random2, pid:process.pid, timestamp: date};
+
+  console.log('--------------');
+  console.log('sending: ', data);
+  socket.send(data);
+}, 5);
 }, 1000);
