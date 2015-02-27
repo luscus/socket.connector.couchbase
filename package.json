@@ -17,7 +17,7 @@
     "assert-plus": "0.1.5",
     "node.extend": "1.1.2",
     "prototype-less": "0.1.1",
-    "socket.base": "0.0.13",
+    "socket.base": "0.0.14",
     "couchbase": "2.0.5"
   },
   "devDependencies": {
