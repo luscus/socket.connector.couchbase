@@ -33,7 +33,7 @@ setInterval(function () {
   var date = new Date().toISOString();
   var random1 = Math.floor(Math.random() * 100000);
   var random2 = Math.floor(Math.random() * 100000);
-  var data = {id: 'test::'+date+'::'+random1+'::'+random2, pid:process.pid, timestamp: date};
+  var data = {id: 'test::', pid:process.pid, timestamp: date};
 
   console.log('--------------');
   console.log('sending: ', data);
