@@ -14,20 +14,20 @@
     "couchbase"
   ],
   "dependencies": {
-    "assert-plus": "0.1.5",
-    "node.extend": "1.1.2",
-    "prototype-less": "0.1.1",
+    "assert-plus": "1.0.0",
+    "node.extend": "1.1.6",
+    "prototype-less": "0.1.2",
     "socket.base": "0.0.17",
-    "couchbase": "2.0.5"
+    "couchbase": "2.2.5"
   },
   "devDependencies": {
-    "grunt": "0.4.5",
+    "grunt": "1.0.1",
     "grunt-license-report": "0.0.8",
-    "grunt-contrib-jshint": "0.11.0",
-    "grunt-mocha-test": "0.12.7",
-    "load-grunt-tasks": "3.1.0",
-    "chai": "2.0.0",
-    "mocha": "2.1.0"
+    "grunt-contrib-jshint": "1.1.0",
+    "grunt-mocha-test": "0.13.2",
+    "load-grunt-tasks": "3.5.2",
+    "chai": "3.5.0",
+    "mocha": "3.2.0"
   },
   "repository": {
     "type": "git",
